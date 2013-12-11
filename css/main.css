@@ -1,0 +1,853 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    background: #eee;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h1 {
+    color: #888;
+    font-family: "proxima-nova";
+    font-weight: 100;
+    font-style: normal;
+    margin: 0
+}
+
+h3 {
+    color: #888;
+    font-family: "proxima-nova";
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0;  
+}
+
+h4 {
+    color: #444;
+    font-family: "proxima-nova";
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background: url('../img/separator.png') repeat-x;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.offset_top_10 {
+    margin-top: 10px;
+}
+
+.offset_left_10 {
+    margin-left: 10px;
+}
+
+.offset_left_20 {
+    margin-left: 20px;
+}
+
+.offset_right_10 {
+    margin-right: 10px;
+}
+
+.offset_right_20 {
+    margin-right: 20px;
+}
+
+.shadow_small {
+  -moz-box-shadow:    0 1px 3px 0 #aaa;
+  -webkit-box-shadow: 0 1px 3px 0 #aaa;
+  box-shadow:         0 1px 3px 0 #aaa;
+}   
+
+.shadow_medium {
+  -moz-box-shadow:    0 1px 5px 0 #888;
+  -webkit-box-shadow: 0 1px 5px 0 #888;
+  box-shadow:         0 1px 5px 0 #888;
+}
+
+.text_shadow_dark {
+   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.text_shadow_light {
+   text-shadow: 0px 1px 0 rgba(255, 255, 255, 1);
+}
+
+.text_shadow_light_v2 {
+   text-shadow: 0px 1px 0 rgba(255, 255, 255, .5);
+}
+
+.gradient {
+    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #FAFAFA),
+    color-stop(1, #EEEEEE)
+    );
+    background-image: -o-linear-gradient(bottom, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: -moz-linear-gradient(bottom, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: -webkit-linear-gradient(bottom, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: -ms-linear-gradient(bottom, #FAFAFA 0%, #EEEEEE 100%);
+    background-image: linear-gradient(to bottom, #FAFAFA 0%, #EEEEEE 100%);
+}
+
+.gradient_2 {
+    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #FF4747),
+    color-stop(1, #FF0000)
+    );
+    background-image: -o-linear-gradient(bottom, #FF4747 0%, #FF0000 100%);
+    background-image: -moz-linear-gradient(bottom, #FF4747 0%, #FF0000 100%);
+    background-image: -webkit-linear-gradient(bottom, #FF4747 0%, #FF0000 100%);
+    background-image: -ms-linear-gradient(bottom, #FF4747 0%, #FF0000 100%);
+    background-image: linear-gradient(to bottom, #FF4747 0%, #FF0000 100%);
+}
+
+.break {
+    display: block;
+}
+
+.center {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.header {
+    background: #fff;
+    height: 70px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.redirect {
+    background: #000;
+}
+
+.logo_bg {
+    border-radius: 100px;
+    float: left;
+    height: 50px;
+    margin: 10px 0 0 30px;
+    width: 50px;
+}
+
+.logo_bg_2 {
+    border-radius: 100px;
+    display: inline-block;
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.logo {
+    color: #a00a0a;
+    display: block;
+    font-size: 30px;
+    margin: 6px 0 0 0;
+    width: 50px;
+    text-align: center;
+}
+
+.navigation{
+    color: #888;
+    float: right;
+    list-style: none;
+    margin: 22px 30px 0 0;
+    padding: 0;
+}
+
+.navigation li {
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.navigation li a {
+    color: #888;
+    font-family: "proxima-nova";
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 40px;
+}
+
+.navigation li a:hover {
+    color: #333;
+}
+
+.navigation li a.active {
+    background: #eee;
+    color: #555;
+    border-radius: 50px;
+}
+
+.welcome {
+    background: #888 url('../img/welcome_bg.jpg') no-repeat;
+    background-size: cover;
+    height: 550px;
+    margin: 70px 0 0 0;
+    width: 100%;
+}
+
+.find_flight {
+    border-radius: 3px;
+    margin: 30px 0 0 10px;
+    padding: 10px 0 40px 0;
+    width: 380px;
+}
+
+.trip_type {
+    color: #888;
+    font-family: "proxima-nova";
+    font-weight: 100;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.trip_destination p {
+    color: #888;
+    font-family: "proxima-nova";
+    font-weight: 700;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+}
+
+.trip_destination input[type=text] {
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+    font-family: "proxima-nova";
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px 7px;
+    width: 151px;
+}
+
+.destination_input {
+    width: 340px;
+}
+
+.destination_input input[type=text] {
+    width: 326px;
+}
+
+.from_input, .to_input, .depart_input, .return_input {
+    width: 165px;
+}
+
+.adult_input input[type=text], .children_input input[type=text] {
+    width: 86px;
+}
+
+.infant_input input[type=text] {
+    width: 106px;
+}
+
+.find_flights {
+    background: #e7a300;
+    border: none;
+    border-radius: 3px;
+    display: inline-block;
+    color: #fff;
+    font-family: "proxima-nova";
+    font-weight: 100;
+    font-size: 24px;
+    font-style: bold;
+    margin: 30px 0 0 20px;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 340px;
+}
+
+.promo {
+    width: 400px;
+    margin: 80px 0 0 0;
+}
+
+.promo h2 {
+    color: #fff;
+    font-family: "proxima-nova";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.promo p {
+    color: #fff;
+    font-family: "proxima-nova";
+    font-weight: 100;
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.promo a {
+    color: #067bff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.plus_sign {
+    color: #e7a300;
+    font-family: "arial";
+    font-size: 32px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.deals {
+    background: #fff;
+    border-bottom: 1px dashed #ddd;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.deals ul {
+    list-style: none;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+.deals ul li {
+    background: #eee;
+    border-radius: 3px;
+    float: left;
+    height: 140px;
+    margin: 0 10px 0 10px;
+    width: 300px;
+}
+
+.deals ul li p {
+    color: #777;
+    font-family: "proxima-nova";
+    font-size: 30px;
+    font-weight: 700;
+    margin: 50px;
+    text-align: center;
+}
+
+.footer { 
+    background: #fff;
+    padding: 40px 0 60px 0;
+    width: 100%;   
+}
+
+.footer_1, .footer_2, .footer_3 {
+    float: left;
+    width: 300px;
+    margin: 0 10px 0 10px;
+}
+
+.footer_1 p, .footer_3 p {
+    color: #888;
+    font-family: "proxima-nova";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer_2 p {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.learn_more {
+    float: left;
+    text-align: right;
+    width: 145px;
+}
+
+.about {
+    float: right;
+    text-align: right;
+    width: 145px;
+}
+
+.social_buttons {
+    margin: 10px 0 0 0;
+}
+
+.filters {
+    background: #ddd;
+    padding: 10px 0 10px 0;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+.sort_by {
+    margin: 10px 10px 0 0;
+}
+
+.sort_by span {
+    color: #555;
+    font-family: "proxima-nova";
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.search_list {
+    background: #eee;
+    padding: 20px 0 60px 0;
+    width: 100%;
+    margin: 130px 0 0 0;
+}
+
+.search_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search_list ul li {
+    background: #fafafa;
+    border-radius: 3px;
+    float: left;
+    margin: 60px 10px 0 10px;
+    padding-bottom: 30px;
+    position: relative;
+    width: 220px;
+}
+
+.company_logo {
+    border-radius: 100px;
+    margin: -40px 0 20px 10px;
+}
+
+.company_logo_2 {
+    border-radius: 100px;
+    margin: 0 0 0 10px; 
+}
+
+.flight_info {
+    background: #f3f3f3;
+    margin: 20px 0 0 0;
+    padding: 5px 0 5px 0;
+    width: 100%;
+}
+
+.thumbnail {
+    border: 1px solid #ddd;
+    height: 198px;
+    margin: 10px 0 0 10px;
+    width: 198px;
+}
+
+.airline_code {
+    color: #555;
+    font-family: "proxima-nova";
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 0 10px;
+}
+
+.take_off_date {
+    color: #888;
+    font-family: "proxima-nova";
+    font-size: 12px;
+    margin: 4px 10px 0 0;
+}
+
+.plane_icon {
+    margin: 0 5px 0 5px;
+}
+
+.flight_times {
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+.flight_times label {
+    color: #bbb;
+    font-family: "proxima-nova";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.departs p, .arrives p {
+    margin: 0;
+    line-height: 12px;
+}
+
+.departs {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 90px;
+}
+
+.arrives {
+    float: right;
+    margin: 0 10px 0 10px;
+    width: 90px;
+}
+
+.time {
+    color: #555;
+    font-family: "proxima-nova";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.small_text {
+    color: #ccc;
+    font-family: "proxima-nova";
+    font-size: 12px;
+}
+
+.small_text_2 {
+    color: #999;
+    font-size: 12px;
+}
+
+.flight_duration {
+    margin: 10px 0 0 10px;
+}
+
+.flight_duration p {
+    color: #555;
+    font-family: "proxima-nova";
+    font-size: 12px;
+}
+
+.book {
+    background: #e7a300;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-family: "proxima-nova";
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 0 0 10px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+}
+
+.redirect_message {
+    margin: 100px auto 0;
+    text-align: center;
+}
+
+.redirect_info {
+    border-radius: 3px;
+    margin: 20px auto;
+    padding: 10px 0 10px 0;
+    width: 500px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
